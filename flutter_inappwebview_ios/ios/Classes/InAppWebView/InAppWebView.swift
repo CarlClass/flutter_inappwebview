@@ -293,6 +293,7 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate,
                     let _ = contextMenuSettings.parse(settings: contextMenuSettingsMap)
                     if contextMenuSettings.hideDefaultSystemContextMenuItems {
                         builder.remove(menu: .lookup)
+                        builder.remove(menu: .share)
                     }
                 }
             }
@@ -3545,3 +3546,4 @@ if(window.\(JavaScriptBridgeJS.get_JAVASCRIPT_BRIDGE_NAME())[\(_callHandlerID)] 
         debugPrint("InAppWebView - dealloc")
     }
 }
+
